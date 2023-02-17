@@ -8,10 +8,10 @@
 
 <style>
   #banner {
-    height:360px;
+    height:600px;
     width:100%;
     object-fit:cover;
-    margin-bottom:16px;
+    margin-bottom:12px;
     
   }
   
@@ -19,7 +19,7 @@
     
   </head>
   <body>
- <img class="img-fluid" src="/static/banner.jpg">
+ <img class="img-fluid" id="banner" src="/static/banner.jpg">
   {% include 'nav.html' %}
     <div class="container">
      <h1 class="text-center mt-2 mb-4">  {{company_name}} Jobs  </h1>
@@ -31,7 +31,7 @@
         
       </div>
       <div class="col-md-6">
-        <img src="/static/people1.webp" style="height:320px; border-radius:4px;">
+        <img  src="/static/people1.webp" style="height:320px; border-radius:4px;">
       </div>
     
     </div>
