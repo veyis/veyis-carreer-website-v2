@@ -1,64 +1,36 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Career demo</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-<style>
-  #banner {
-    height:600px;
-    width:100%;
-    object-fit:cover;
-    margin-bottom:12px;
-    
-  }
-  
-</style>
-    
+    <title>Jovian Careers</title>
+    {% include 'bootstrap.html' %}
   </head>
   <body>
- <img class="img-fluid" id="banner" src="/static/banner.jpg">
-  {% include 'nav.html' %}
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
     <div class="container">
-     <h1 class="text-center mt-2 mb-4">  {{company_name}} Jobs  </h1>
-    <div class='row' style="margin-bottom:16px;">
-      <div class='col-md-6'> 
-         <p class="lead">
-        Dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
-     </p>
-        
+      <h1 class="text-center mt-2 mb-4">
+        Jovian Careers
+      </h1>
+      <div class="row" style="margin-bottom:32px">
+        <div class="col-md-6">
+      <p class="lead">
+        At Jovian, we’re on a mission to build the most highly reputed technical university in the world, and we’re building it completely online. Our flagship data science program helps working professionals with a background in programming or analytics make a career transition to data science. We also offer several free beginner-friendly courses and have a fast-growing community of 200,000+ users.
+      </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.jpeg" style="height:320px;border-radius:4px;">
+        </div>
       </div>
-      <div class="col-md-6">
-        <img  src="/static/people1.webp" style="height:320px; border-radius:4px;">
-      </div>
-    
-    </div>
-     <h2> About Jovian Jobs</h2>
-    
-       
-     <h2 class="text-center"> Open Positions </h2>
-     <div>
-      
-       {% for job in jobs %}
-
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>
+        {% for job in jobs %}
           {% include 'jobitem.html' %}
-            
-       {% endfor %}
-      
-</div>
-     
-<div class="text-center">
-       <button class="btn btn-primary btn-lg"> Contact US </button>
-    <p class="mt-4"> Copyright 2023 </p>
-</div>
-
-</div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-{% include 'footer.html' %}
-    
+        {% endfor %}
+      </div>
+      <div class="text-center">
+      <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
+      </div>
+    </div>
+    {% include 'footer.html' %}
   </body>
- </html>
+</html>
